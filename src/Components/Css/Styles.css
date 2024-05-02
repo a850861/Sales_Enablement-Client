@@ -9,7 +9,7 @@
 }
 .logo {
   position: fixed;
-  left: 2%;
+  left: 1%;
   display: flex;
   align-items: center;
 }
@@ -29,4 +29,34 @@
   max-width: 30px;
   max-height: 30px;
   margin: 0 5px;
+}
+.sidebar-conatiner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 1%;
+  position: fixed;
+  background-color: white;
+  left: 0%;
+  height: 100%;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.sidebar-icon {
+  margin-left: 5%;
+  max-width: 30px;
+  max-height: 30px;
+  margin-bottom: 20px;
+}
+
+.sidebar-icon:last-child {
+  margin-bottom: 0;
 }
