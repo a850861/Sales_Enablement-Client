@@ -14,9 +14,8 @@ function Main() {
     { lat: 15.93909, lng: 74.48794 },
     { lat: 15.61752, lng: 76.90058 },
   ];
-
   return (
-    <APIProvider apiKey={process.env.google_map_api}>
+    <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAP_API}>
       <div className="map">
         <Map defaultZoom={5} defaultCenter={position}>
           {retailers.map((marker, index) => (
