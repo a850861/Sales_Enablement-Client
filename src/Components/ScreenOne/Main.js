@@ -16,7 +16,7 @@ function Main() {
   ];
 
   return (
-    <APIProvider apiKey="AIzaSyCyNjui_kP5XgwksWW39zvjec4C4zCIcQY">
+    <APIProvider apiKey={process.env.google_map_api}>
       <div className="map">
         <Map defaultZoom={5} defaultCenter={position}>
           {retailers.map((marker, index) => (
