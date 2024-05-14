@@ -52,10 +52,16 @@
 }
 .retailers {
   display: flex;
+  /* align-items: center; */
   justify-content: space-between;
   gap: 4px;
   /* background-color: rgba(204, 229, 255, 1); */
   border-radius: 8px;
+}
+.retailers.highlighted {
+  width: 100%;
+  cursor: pointer;
+  background-color: #2196f3;
 }
 .salesman {
   display: flex;
@@ -253,4 +259,14 @@ input:checked + .slider:before {
 
 .dropdown.active .dropdown-menu {
   display: block;
+}
+.map {
+  display: flex;
+  position: fixed;
+  /* width: 1220px; */
+  /* height: 1121px; */
+  top: 140px;
+  left: 120px;
+  right: 0;
+  bottom: 0;
 }

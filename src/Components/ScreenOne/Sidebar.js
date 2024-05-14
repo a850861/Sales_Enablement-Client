@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Retailer from "../Images/Retailer.png";
 import Salesman from "../Images/Salesman.svg";
 import "../Css/Styles.css";
 
 const Sidebar = () => {
+  const [isClicked, setIsClicked] = useState(false);
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
+  const divClassName = `retailers ${isClicked ? "highlighted" : ""}`;
+  // const divStyle = {
+  //   padding: "20px",
+  //   backgroundColor: isClicked ? "yellow" : "lightgray",
+  //   cursor: "pointer",
+  // };
+
   return (
     <div className="sidebar-conatiner">
       <div className="sidebar">
-        <div className="retailers">
+        <div onClick={handleClick} className={divClassName}>
           <img src={Retailer} alt="#Retailer" className="sidebar-icon" />
           <span className="text1">Retailers</span>
         </div>
