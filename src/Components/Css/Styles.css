@@ -49,6 +49,8 @@
   flex-direction: column;
   align-items: center;
   margin-right: 20px;
+  gap: 15px;
+  margin-top: 10px;
 }
 .retailers {
   display: flex;
@@ -59,6 +61,7 @@
   gap: 4px;
   /* background-color: rgba(204, 229, 255, 1); */
   border-radius: 8px;
+  flex-direction: column;
 }
 
 .retailers.highlighted {
@@ -71,23 +74,22 @@
   display: flex;
   justify-content: space-between;
   gap: 4px;
+  flex-direction: column;
 }
 .text1 {
   font-size: 12px;
   font-family: Noto Sans;
-  margin-top: 5px;
 }
 .text2 {
   font-size: 12px;
   font-family: Noto Sans;
-  margin-top: 5px;
 }
 
 .sidebar-icon {
   margin-left: 5%;
   max-width: 30px;
   max-height: 30px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .sidebar-icon:last-child {
@@ -97,11 +99,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 120px;
+  margin-left: 100px;
   padding: 16px;
   width: 100%;
   background-color: white;
   position: fixed;
+  z-index: 1000;
 }
 .search-container {
   display: flex;
@@ -189,9 +192,11 @@ input:checked + .slider:before {
   color: rgba(15, 15, 15, 0.6);
   font-weight: 200;
 }
-
+.dropdown-container {
+  position: relative;
+}
 .dropdown {
-  /* position: relative; */
+  position: relative;
   display: flex;
   height: 50px;
   /* border: 1px solid #ccc; */
@@ -240,18 +245,18 @@ input:checked + .slider:before {
 
 .dropdown-menu {
   position: absolute;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  top: calc(100% + 1px);
+  background-color: #f7f5f5;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 300px;
   box-shadow: 0 2px 4px rgba(13, 12, 12, 0.1);
-  z-index: 1;
+  z-index: 1001;
   display: none;
 }
-
 .dropdown-option {
   padding: 8px 16px;
   cursor: pointer;
@@ -261,9 +266,11 @@ input:checked + .slider:before {
   background-color: #f0f0f0;
 }
 
-.dropdown.active .dropdown-menu {
+.dropdown-menu.open {
   display: block;
+  width: 358px;
 }
+
 
 .map {
   display: flex;
@@ -271,7 +278,7 @@ input:checked + .slider:before {
   /* width: 1220px; */
   /* height: 1121px; */
   top: 140px;
-  left: 120px;
+  left: 92px;
   right: 0;
   bottom: 0;
 }
