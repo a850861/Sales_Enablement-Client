@@ -1,8 +1,7 @@
 import React from "react";
 import { Map, APIProvider, Marker } from "@vis.gl/react-google-maps";
 
-function Main() {
-  // const [open, setOpen] = useState(false);
+function Main({ showMarkers }) {
   const position = {
     lat: 20.5937,
     lng: 78.9629,
@@ -18,12 +17,13 @@ function Main() {
     <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAP_API}>
       <div className="map">
         <Map defaultZoom={5} defaultCenter={position}>
-          {retailers.map((marker, index) => (
-            <Marker
-              key={index}
-              position={{ lat: marker.lat, lng: marker.lng }}
-            />
-          ))}
+          {showMarkers &&
+            retailers.map((marker, index) => (
+              <Marker
+                key={index}
+                position={{ lat: marker.lat, lng: marker.lng }}
+              />
+            ))}
         </Map>
       </div>
     </APIProvider>
