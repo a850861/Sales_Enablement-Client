@@ -1,7 +1,5 @@
 
 import React, { useState } from "react";
-=======
-import React from "react";
 
 import Retailer from "../Images/Retailer.png";
 import Salesman from "../Images/Salesman.svg";
@@ -24,11 +22,6 @@ const Sidebar = () => {
     <div className="sidebar-conatiner">
       <div className="sidebar">
         <div onClick={handleClick} className={divClassName}>
-=======
-  return (
-    <div className="sidebar-conatiner">
-      <div className="sidebar">
-        <div className="retailers">
 
           <img src={Retailer} alt="#Retailer" className="sidebar-icon" />
           <span className="text1">Retailers</span>
